@@ -63,7 +63,11 @@ export default function NavBar() {
                         )
                     })}
                 </ul>
-                <button className='w-max mx-auto text-white px-2 py-1 rounded-lg bg-purple font-inter max-[834px]:text-lg text-xl font-normal' onClick={togglekMode}>Change Theme</button>
+                <div class="relative inline-block w-11 h-5" >
+                    <input onChange={togglekMode} id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+                    <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                    </label>
+                </div>
                 <img onClick={() => setShow(!show)} className='hidden max-[768px]:block w-8 h-8 absolute bottom-14 left-1/2 -translate-x-1/2 dark:bg-white rounded-lg' src={XBlack} alt="close" />
             </div>
             <img onClick={() => setShow(!show)} className='hidden max-[768px]:block w-8 h-8 dark:bg-white rounded-lg' src={menuBlack} alt="menu" />
